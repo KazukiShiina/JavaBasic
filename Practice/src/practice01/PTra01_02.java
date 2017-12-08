@@ -8,14 +8,14 @@ package practice01;
 
 public class PTra01_02 {
 	public static void main(String[] args) {
+		System.out.println("米米");
+		System.out.println("コメンコメン");
+		System.out.println("米粉パン");
+	
 
-		// ★ 12～14行目をコメントにしてください。
-		ここをコメントにしてください
-		ここをコメントにしてください
-		ここをコメントにしてください
 
 		//  ★「Hello, world」と出力（コマンドプロンプトに表示）してください
+System.out.println("Hello,world");
 
-
-	}
+	 }
 }
