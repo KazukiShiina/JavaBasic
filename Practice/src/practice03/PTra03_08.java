@@ -35,6 +35,20 @@ public class PTra03_08 {
 		 *
 		 * ※ プログラムは何行書いても良いです
 		 */
-
+		
+		int o = 150;
+		int r = 160;
+		int c = 200;
+		
+		if( num == 1 ) {
+			System.out.println( "1000 - 150 = "+ (money - o ));
+		}else if( num == 2 ) {
+			System.out.println( "1000 - 160 = "+( money - r ));
+		}else if( num == 3 ) {
+			System.out.println( "1000 - 200 = "+( money - c ));
+		}else {
+			System.out.println("1-3を選択してください");
+				}
+			}
 	}
-}
+
