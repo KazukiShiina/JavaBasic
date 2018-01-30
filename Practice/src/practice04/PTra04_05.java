@@ -47,20 +47,32 @@ public class PTra04_05 {
 			if (cpuHand == 0) {
 				System.out.println("グー！");
 
-
-
 			} else if (cpuHand == 1) {
 				System.out.println("チョキ！！");
 
-
-
 			} else {
 				System.out.println("パー！！");
-
-
-
+				
+			}
+			
+			if(myHand >= 3) {
+			System.out.println("0〜2の数字を入力してください。");
+			System.out.println();
+			
+			} else if (myHand == 0 && cpuHand == 2 || myHand == 1 && cpuHand == 0 || myHand == 2 && cpuHand == 1)  {
+				System.out.println("あなたの負けです。");
+				System.out.println();
+				
+			} else if (myHand == 0 && cpuHand == 0 || myHand == 1 && cpuHand == 1 || myHand == 2 && cpuHand == 2 ) {
+				System.out.println("引き分けです。");
+				System.out.println();
+				
+			} else {
+				System.out.println("あなたの勝ちです。");
+				winFlg = true;
 			}
 
 		}
+			System.out.println("じゃんけんゲームを終了します。");
 	}
 }
