@@ -14,7 +14,7 @@ public class PTra05_03 {
 
 		// ★ int型の変数indexを宣言して、0で初期化してください
 		int index = 0;
-		
+
 
 		// ★ int型の変数mountainを宣言して、0で初期化してください
 		int mountain = 0;
@@ -44,17 +44,17 @@ public class PTra05_03 {
 			 */
 		switch (line) {
 		case "山":
-		mountain = mountain + 1;
+		mountain++;
 			break;
-			
+
 		case "川":
-		river = river + 1;
+		river++;
 			break;
-			
+
 		case "海":
-		ocean = ocean + 1;
+		ocean++;
 			break;
-			
+
 		default:
 			System.out.println("無効票です");;
 		}
@@ -65,10 +65,10 @@ public class PTra05_03 {
 		}
 
 		// ★ 変数mountain、river、oceanの票数をそれぞれ出力してください
-		
+
 		System.out.println("山"+"　"+mountain+"票");
 		System.out.println("川"+"　"+river+"票");
 		System.out.println("海"+"　"+ocean+"票");
-		
+
 	}
 }
