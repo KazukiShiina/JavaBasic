@@ -11,6 +11,7 @@ public class PTra08_05 {
 		// 入力型プログラムです。
 		// 下記の命令は、入力型プログラムで必要な記述になります。
 		java.util.Scanner scanner = new java.util.Scanner(System.in);
+		
 
 		System.out.println("図形の横の長さを入力してください");
 
@@ -32,8 +33,17 @@ public class PTra08_05 {
 		int choice = scanner.nextInt();
 
 		// ★ 変数choiceの中が、1であれば四角形の面積を算出するメソッドを、2であれば三角形の面積を算出するメソッドを呼び出してください
-
+		switch(choice) {
+			case 1:
+				System.out.println(quadrangle(width,height));
+				break;
+			case 2:
+				System.out.println(triangle(width,height));
+				break;
+		}
+		scanner.close();
 	}
+	
 
 	/*
 	 * ★ 以下の仕様でメソッドを作成してください
@@ -44,8 +54,10 @@ public class PTra08_05 {
 	 *
 	 * 引数で渡された横の長さ(width)と縦の長さ(height)から、四角形の面積を返すメソッド
 	 */
-
-
+	public static double quadrangle(double width,double height) {
+		return  ( width *  height);
+		 
+	}
 	/*
 	 * ★ 以下の仕様でメソッドを作成してください
 	 *
@@ -55,5 +67,10 @@ public class PTra08_05 {
 	 *
 	 * 引数で渡された横の長さ(width)と縦の長さ(height)から、三角形の面積を返すメソッド
 	 */
+	public static double triangle(double width,double height) {
+		
+		return ( width * height / 2);
+		
+	}
 
 }

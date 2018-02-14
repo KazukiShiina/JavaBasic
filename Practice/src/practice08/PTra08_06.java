@@ -25,16 +25,29 @@ public class PTra08_06 {
 	 *
 	 * 引数で渡された値の前後に 「 」 を付与して出力するメソッド（"「"と引数と"」"の連結）
 	 */
+	
 	public static void dispValue(String message) {
 		System.out.println("「" + message + "」");
 	}
 
 	// ★ dispValueを引数intでオーバーロードしてください。処理は同じ
-
-
+	
+	public static void dispValue(int message) {
+		System.out.println("「" + message + "」");
+		
+	}
+	
 	// ★ dispValueを引数doubleでオーバーロードしてください。処理は同じ
+	
+	public static void dispValue(double message) {
+		System.out.println("「" + message + "」");
+	}
 
 
 	// ★ dispValueを引数charでオーバーロードしてください。処理は同じ
+	
+	public static void dispValue(char message) {
+		System.out.println("「" + message + "」");
+	}
 
 }
