@@ -1,4 +1,5 @@
 package practice10;
+
 /*
  * PTra10_05.java
  *   作成	LIKEIT	2017
@@ -27,19 +28,19 @@ public class PTra10_05 {
 
 		// Carクラスを作成後に着手してください
 		// ★ Car型の変数carを宣言し、Carクラスのインスタンスを代入してください
-
+		Car car = new Car();
 
 		// ★ 変数carに格納されているインスタンスのserialNoフィールドに、10000を代入してください
-
+		car.serialNo = 10000;
 
 		// ★ 変数carに格納されているインスタンスのcolorフィールドに、"Red"を代入してください
-
+		car.color = "Red";
 
 		// ★ 変数carに格納されているインスタンスのgasolineフィールドに、50を代入してください
-
+		car.gasoline = 50;
 
 		// 目的地までの距離
-		final int distance = 300;
+		int distance = 300;
 
 		/*
 		 * ★ 変数carに格納されているインスタンスメソッドrunを使って、目的地まで進んでください
@@ -48,5 +49,23 @@ public class PTra10_05 {
 		 * ※n：runメソッドを実行した回数, xは残りのガソリンの数です
 		 */
 
+		while(true) {
+
+				distance -= car.run();
+				
+
+				if(car.gasoline < 0) {
+					System.out.println("目的地に到達できませんでした");
+					break;
+				}
+
+				if(distance < 0 ){
+					int n = 50 - car.gasoline;
+					int x = car.gasoline;
+					System.out.println("目的地までに"+n+"時間かかりました。残りのガソリンは、"+x+"リットルです");
+					break;
+
+			}
+		}
 	}
 }

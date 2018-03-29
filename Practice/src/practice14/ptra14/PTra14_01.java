@@ -6,6 +6,8 @@
  */
 package practice14.ptra14;
 
+import practice14.common.JavaCourse;
+
 public class PTra14_01 {
 
 	/*
@@ -23,4 +25,15 @@ public class PTra14_01 {
 	 * 		高度な継承
 	 */
 
+	public static void main(String[] args) {
+		JavaCourse c = new JavaCourse();
+		
+		System.out.println(c.getCourseName());
+		
+		for (int i = 0; i < c.getCourseUnit().length; i++) {
+			System.out.println(c.getCourseUnit()[i]);
+		}
+		
+	}
+	
 }

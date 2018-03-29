@@ -1,4 +1,5 @@
 package practice10;
+
 /*
  * PTra10_04.java
  *   作成	LIKEIT	2017
@@ -15,30 +16,57 @@ public class PTra10_04 {
 	public static void main(String[] args) {
 
 		// ★ User型の変数が3つ入る配列usersを宣言・確保してください
-
+		User[] users = new User[3];
+		
 
 		// ★ java.util.Scannerクラスをインスタンス化し、変数scannerに代入してください
-
+		java.util.Scanner scanner = new java.util.Scanner(System.in);
 
 		// ★ usersのサイズ分繰り返す制御構文を記述してください
 		//----------- ループ start
-
-			System.out.println("##人目の情報を入力します");		/* ##には、カウントを入れてください */
+		for (int i = 0; i < users.length; i++) {
+			
+			System.out.println((i+1)+"人目の情報を入力します");		/* ##には、カウントを入れてください */
 			System.out.println("ユーザID（数字）、 ユーザ名、メールアドレス、パスワードをカンマ区切りで入力してください");
 
 			// ★ コマンドプロンプトに入力された値を、String型の変数lineに格納してください
-
+			String line = scanner.next();
 
 			// ★ 変数lineに格納されている値を','で区切り、配列にしてください（Stringクラスのメソッドを使用します）
-
+			String[] s = line.split(",",0);
 
 			// ★ 配列にした値を、users[カウント]の各フィールドに代入してください
 			// ★ ユーザIDに該当する値が数値でなかった場合は、エラーでプログラムが止まっても良いです
-
+			users[i] = new User();
+			users[i].userId = Integer.parseInt(s[0]);
+			users[i].userNm = s[1];
+			users[i].mail = s[2];
+			users[i].password = s[3];
+		}
 
 		//----------- ループ end
+		scanner.close();
 
 		// ★ usersに格納されている全てのインスタンスの、フィールドuserId, userNm, mail, passwordを出力してください
-
+			System.out.println("1人目の入力情報");
+				System.out.println(users[0].userId);
+				System.out.println(users[0].userNm);
+				System.out.println(users[0].mail);
+				System.out.println(users[0].password);
+				System.out.println();
+			
+			System.out.println("2人目の入力情報");
+				System.out.println(users[1].userId);
+				System.out.println(users[1].userNm);
+				System.out.println(users[1].mail);
+				System.out.println(users[1].password);
+				System.out.println();
+			
+			System.out.println("3人目の入力情報");
+				System.out.println(users[2].userId);
+				System.out.println(users[2].userNm);
+				System.out.println(users[2].mail);
+				System.out.println(users[2].password);
+		
 	}
 }
