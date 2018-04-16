@@ -26,7 +26,7 @@ public class PTra15_02 {
 		for (int i = 0; i < s.length; i++) {
 			s[i] = room.getCurriculum()[i];
 			System.out.println(s[i]);
-			
+						
 			
 		}
 	}
