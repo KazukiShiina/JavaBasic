@@ -26,38 +26,41 @@ public class PTra18_03 {
 		 * ★ file/BestElevenCandidate.csvの内容を取得し、１行毎にPlayerインスタンスに情報を格納してください
 		 * ★ ArrayListを作成して、Playerインスタンスを格納してください
 		 */
-		 ArrayList<Player> array = new ArrayList<>();
-	        try(Scanner scanner = new Scanner(new File("file/BestElevenCandidate.csv"))) {
-	            while (scanner.hasNext()) {
-	                String line = scanner.nextLine();
-	                // ★ 1行ごとにArrayListに格納してください
-	                Player p = new Player();
-	                
-	                String[] r = line.split(",",0);
-	                
-	               p.setPosition(r[0]);
-	               p.setName(r[1]);
-	               p.setCountry(r[2]);
-	               p.setTeam(r[3]);
-	               
-	                
-	                array.add(p);
-	                array.remove(array.indexOf("レアル・マドリード"));
+		ArrayList<Player> array = new ArrayList<>();
+		try (Scanner scanner = new Scanner(new File("file/BestElevenCandidate.csv"))) {
+			while (scanner.hasNext()) {
+				String line = scanner.nextLine();
+				// ★ 1行ごとにArrayListに格納してください
+				Player p = new Player();
 
-	            }
-	        } catch (FileNotFoundException e) {
-	            System.out.println("ファイルが見つかりません");
-	        }
+				String[] r = line.split(",", 0);
+
+				p.setPosition(r[0]);
+				p.setName(r[1]);
+				p.setCountry(r[2]);
+				p.setTeam(r[3]);
+				array.add(p);
+
+			}
+		} catch (FileNotFoundException e) {
+			System.out.println("ファイルが見つかりません");
+		}
 
 		// ★ ①のArrayListの中から"レアル・マドリード", "バルセロナ"の選手を除外してください
-	      
-	       
+		for (int i = array.size()-1; i >= 0; i--) {
+    			if(array.get(i).getTeam().equals("レアル・マドリード") || array.get(i).getTeam().equals("バルセロナ")  ) {
+    				array.remove(i);
+    			}
+
+		}
 
 		// ★ 削除後のArrayListの中身を全件出力してください
-	        
-	        for(Player play : array ) {
-        		System.out.println(play.toString());
-        }
+
+
+
+		for (Player play : array) {
+			System.out.println(play.toString());
+		}
 
 	}
 }

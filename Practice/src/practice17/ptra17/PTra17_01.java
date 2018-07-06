@@ -19,8 +19,6 @@ public class PTra17_01 {
 			ThrowExceptionUtil.nullToBlank(null);
 		} catch (Exception e) {
 			System.out.println("例外が発生しました");
-			
 		}
-		
 	}
 }
